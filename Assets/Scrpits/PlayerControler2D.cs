@@ -40,6 +40,8 @@ public class PlayerControler2D : MonoBehaviour
 
     public GameObject AlmaMadre;
 
+    public GameObject Rama;
+
     
     
 
@@ -61,9 +63,14 @@ public class PlayerControler2D : MonoBehaviour
     {
 
         if(AllAlmas==true){
+            Debug.Log("hola");
+            Rama.SetActive(true);
             AlmaMadre.SetActive(true);
             AllAlmas=false;
         }
+    
+            
+        
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
        
@@ -116,6 +123,7 @@ public class PlayerControler2D : MonoBehaviour
          if(TAlma1==true && TAlma2==true && TAlma3==true && TAlma4==true){
              AllAlmas=true;
          }
+         
          
 
     }
