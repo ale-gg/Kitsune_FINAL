@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Poder1 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public PlayerControler2D player;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+  
+
+      void OnTriggerEnter2D(Collider2D obj){
+        if(obj.tag=="Player"){
+             
+             player.poder1=true;
+           
+            gameObject.SetActive(false);
+        }
     }
+    
 }
+

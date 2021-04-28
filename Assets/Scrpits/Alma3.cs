@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Alma3 : MonoBehaviour
 {
-   public ENTE ente;
 
+  public PlayerControler2D player;
 
+  
 
       void OnTriggerEnter2D(Collider2D obj){
         if(obj.tag=="Player"){
              
-             ente.TAlma3=true;
+             player.TAlma3=true;
            
             gameObject.SetActive(false);
         }
     }
     
 }
+

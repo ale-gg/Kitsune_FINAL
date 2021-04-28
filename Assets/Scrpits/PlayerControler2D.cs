@@ -24,10 +24,26 @@ public class PlayerControler2D : MonoBehaviour
 
        public bool poder1;
 
-         public GameObject murito;
+       public bool AllAlmas;
+
+    public GameObject murito;
     public GameObject murito1;
     public GameObject murito2;
     public GameObject murito3;
+
+    public bool TAlma1;
+    public bool TAlma2;
+    public bool TAlma3;
+    public bool TAlma4;
+
+    public GameObject AlmaMadre;
+
+    
+    
+
+
+      
+
 
 
     
@@ -41,6 +57,11 @@ public class PlayerControler2D : MonoBehaviour
     }
     void Update()
     {
+
+        if(AllAlmas==true){
+            AlmaMadre.SetActive(true);
+            AllAlmas=false;
+        }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
       
        if(Input.GetButton("Horizontal"))
@@ -64,6 +85,7 @@ public class PlayerControler2D : MonoBehaviour
              StartCoroutine ("Esperar");
         }
 
+
        void OnCollisionEnter2D(Collision2D col) {
        
         if(col.collider.tag=="suelo"){
@@ -84,21 +106,34 @@ public class PlayerControler2D : MonoBehaviour
          }else{
               anim.SetBool("Dash", false);
          }
+
+         if(TAlma1==true && TAlma2==true && TAlma3==true && TAlma4==true){
+             AllAlmas=true;
+         }
          
 
     }
 
-         void OnTriggerStay2D(Collider2D other){
-           if(poder1==true){
-               if(runSpeed==400){
+
+            void OnCollisionStay2D(Collision2D col) {
+              
+                if(poder1==true && runSpeed==400){
+                    Debug.Log("Chocando con algo");
+               
                 murito.GetComponent<BoxCollider2D>().isTrigger= true;
                 murito1.GetComponent<BoxCollider2D>().isTrigger= true;
                 murito2.GetComponent<BoxCollider2D>().isTrigger= true;
                 murito3.GetComponent<BoxCollider2D>().isTrigger= true;
                  StartCoroutine ("Muro");
                }
-        }
-    }
+            }
+                
+        
+
+
+         
+
+
 
     void FixedUpdate ()
     {
