@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - suelo
+  - Traspaso
+  - Poder2
+  - Arbol
+  - player
+  - poder2
   layers:
   - Default
   - TransparentFX

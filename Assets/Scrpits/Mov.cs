@@ -35,10 +35,13 @@ public bool pose;
     {
       
       if(Input.GetKeyDown(KeyCode.F)&& posesion ==true){
+        transform.eulerAngles=new Vector3(0,0,0);
         posesion = false;
         pose = true;
+         
       }
        if(Input.GetKeyUp(KeyCode.F)){
+        
         pose = false;
        
       }
@@ -46,7 +49,7 @@ public bool pose;
       if(posesion ==true){
             transform.Translate(velocidadActual * Time.deltaTime,0, 0);
             velocidadActual=0f;
-         if(Input.GetKey(KeyCode.RightArrow)&& posesion ==true){
+         if(Input.GetKey(KeyCode.D)&& posesion ==true){
               velocidadActual=0;
 
             transform.eulerAngles=new Vector3(0,0,0);
@@ -54,7 +57,7 @@ public bool pose;
             velocidadActual=velocidadAndar;
 
         }else{
-            if (!Input.GetKey(KeyCode.LeftArrow)&& posesion ==true){
+            if (!Input.GetKey(KeyCode.A)&& posesion ==true){
 
                 velocidadActual=0;
             
@@ -98,8 +101,9 @@ public bool pose;
 
         void OnTriggerStay2D(Collider2D other){
             if(other.tag=="Arbol"){
+              Debug.Log("hola");
                GetComponent<Rigidbody2D>().gravityScale = 0;
-             if(Input.GetKey(KeyCode.UpArrow)){
+             if(Input.GetKey(KeyCode.W)){
             velocidadActual=0;
        
               transform.eulerAngles = new Vector3(0,0, 90);
@@ -118,7 +122,7 @@ public bool pose;
            
            
             }
-            if(other.tag=="player" && Input.GetKeyDown(KeyCode.E)){
+            if(other.tag=="Player" && Input.GetKeyDown(KeyCode.E)){
             posesion=true;
           }  
         }

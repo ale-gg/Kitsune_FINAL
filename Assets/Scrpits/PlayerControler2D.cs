@@ -24,6 +24,8 @@ public class PlayerControler2D : MonoBehaviour
 
        public bool poder1;
 
+       public bool poder2;
+
        public bool AllAlmas;
 
     public GameObject murito;
@@ -63,6 +65,10 @@ public class PlayerControler2D : MonoBehaviour
             AllAlmas=false;
         }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+       
+
+        
       
        if(Input.GetButton("Horizontal"))
         {
@@ -113,7 +119,15 @@ public class PlayerControler2D : MonoBehaviour
          
 
     }
-
+             void OnTriggerStay2D(Collider2D other){
+           if(other.tag=="poder2"){
+                 if(Input.GetKeyDown(KeyCode.E)){
+                     if(poder2==true){
+                        Destroy(gameObject);
+                     }    
+                 }
+           }
+        }
 
             void OnCollisionStay2D(Collision2D col) {
               
