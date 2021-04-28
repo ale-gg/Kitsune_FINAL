@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActivarPoder1 : MonoBehaviour
 {
 
-    public PlayerMovement kitsune;
+    public PlayerControler2D kitsune;
 
  
 
