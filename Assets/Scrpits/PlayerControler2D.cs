@@ -70,6 +70,7 @@ public class PlayerControler2D : MonoBehaviour
             Rama.SetActive(true);
             AlmaMadre.SetActive(true);
             AllAlmas=false;
+            TAlma1=false;
         }
     
             
@@ -82,6 +83,7 @@ public class PlayerControler2D : MonoBehaviour
       
        if(Input.GetButton("Horizontal"))
         {
+           
            
              anim.SetBool("Walk", true);
            
@@ -110,11 +112,14 @@ public class PlayerControler2D : MonoBehaviour
                 anim.SetBool("Jump", false);
             }
         }
-
+        
+        
           if(Input.GetKey(KeyCode.LeftShift)&& poder1==true && CooldawnDash==false){
+                GetComponent<AudioSource>().Play();
                 anim.SetBool("Dash", true);
                 runSpeed= Speed;
                 CooldawnDash=true;
+                
                 StartCoroutine ("EsperarDash");
                 StartCoroutine ("CDRDash");
                  

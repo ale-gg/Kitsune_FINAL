@@ -1523,6 +1523,11 @@ PrefabInstance:
       propertyPath: fuerza
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3200094743368371540, guid: 415d8432955338f409ac60e14bfc6bd1,
+        type: 3}
+      propertyPath: Rama
+      value: 
+      objectReference: {fileID: 712955165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 415d8432955338f409ac60e14bfc6bd1, type: 3}
 --- !u!1001 &6569050946979263545
