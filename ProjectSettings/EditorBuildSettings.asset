@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BETA/CC.unity
     guid: ecc6ac0deb9414144a9a042d269c41aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BETA/Nivel _Tutorial.unity
     guid: 8912abcfbaad79b4d858ded718a31a83
   - enabled: 1
