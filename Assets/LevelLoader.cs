@@ -7,17 +7,20 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
 
-    public float transitionTime = 1f;
+    public float transitionTime = 3f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
-    }
+    public SceneChange player;
 
+   
+
+          void Update()
+         {
+             if(player.Cambio==true)
+             {
+                LoadNextLevel();
+            }  
+         }
+     
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));

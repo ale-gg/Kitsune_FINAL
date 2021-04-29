@@ -43,6 +43,8 @@ public class PlayerControler2D : MonoBehaviour
     public GameObject Rama;
 
     
+
+    
     
 
 
@@ -57,13 +59,14 @@ public class PlayerControler2D : MonoBehaviour
     {
         {
             anim=GetComponent<Animator>();
+          
         }
     }
     void Update()
     {
 
         if(AllAlmas==true){
-            Debug.Log("hola");
+           
             Rama.SetActive(true);
             AlmaMadre.SetActive(true);
             AllAlmas=false;
@@ -150,7 +153,16 @@ public class PlayerControler2D : MonoBehaviour
                }
             }
                 
-        
+        void OnTriggerEnter2D(Collider2D other)
+   {    
+       if(other.tag=="viento"){
+           Debug.Log("hola");
+       
+            GetComponent<Rigidbody2D>().AddForce (new Vector2 (-1000,0));
+       }
+   
+       
+   }
 
 
          

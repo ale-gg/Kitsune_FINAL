@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 3200094743368371537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
-  m_LocalScale: {x: -0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 3200094743935151815}
   - {fileID: 3200094742382934793}
@@ -177,6 +177,7 @@ MonoBehaviour:
   TAlma3: 0
   TAlma4: 0
   AlmaMadre: {fileID: 0}
+  Rama: {fileID: 0}
 --- !u!50 &3200094743368371541
 Rigidbody2D:
   serializedVersion: 4
