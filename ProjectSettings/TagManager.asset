@@ -11,6 +11,7 @@ TagManager:
   - player
   - poder2
   - viento
+  - seta
   layers:
   - Default
   - TransparentFX
