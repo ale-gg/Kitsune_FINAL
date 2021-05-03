@@ -24,11 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/BETA/Nivel _Tutorial.unity
     guid: 8912abcfbaad79b4d858ded718a31a83
   - enabled: 1
-    path: Assets/Scenes/BETA/Nivel_1.unity
-    guid: 9598b5dae8af12648924405d7a6c8cdc
-  - enabled: 1
     path: Assets/Scenes/BETA/Nivel_2.unity
     guid: 424c6d62bf09b9c48addcdb5698b906d
+  - enabled: 1
+    path: Assets/Scenes/BETA/Nivel_1.unity
+    guid: 9598b5dae8af12648924405d7a6c8cdc
   - enabled: 1
     path: Assets/Scenes/BETA/Nivrl_3.unity
     guid: 588ecb3412690da408c0f6a7ba48d55f
